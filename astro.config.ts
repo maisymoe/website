@@ -4,5 +4,6 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
+    site: "https://maisymoe.github.io",
     integrations: [uno(), mdx()]
 });
