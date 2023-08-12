@@ -21,6 +21,9 @@ dependencies:
     version: 0.2.1(unocss@0.55.0)
 
 devDependencies:
+  '@iconify-json/simple-icons':
+    specifier: ^1.1.65
+    version: 1.1.65
   '@types/node':
     specifier: ^20.4.10
     version: 20.4.10
@@ -791,9 +794,14 @@ packages:
     dev: false
     optional: true
 
+  /@iconify-json/simple-icons@1.1.65:
+    resolution: {integrity: sha512-pCL5nF80e5YrvnR9VFt7EROEcWE6vvtBaThx+hC1Xaw3e1DkCTc4JioiNnYrON/p2iNVvncAQAgQP1Us/XPInw==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
-    dev: false
 
   /@iconify/utils@2.1.7:
     resolution: {integrity: sha512-P8S3z/L1LcV4Qem9AoCfVAaTFGySEMzFEY4CHZLkfRj0Fv9LiR+AwjDgrDrzyI93U2L2mg9JHsbTJ52mF8suNw==}

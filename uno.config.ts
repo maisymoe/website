@@ -1,4 +1,4 @@
-import { defineConfig, presetUno, presetWebFonts, transformerVariantGroup } from "unocss";
+import { defineConfig, presetUno, presetIcons, presetWebFonts, transformerVariantGroup } from "unocss";
 import { presetScrollbar } from "unocss-preset-scrollbar";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
@@ -7,6 +7,7 @@ export default defineConfig({
     presets: [
         presetUno(),
         presetScrollbar(),
+        presetIcons(),
         presetWebFonts({
             provider: "google",
             fonts: {

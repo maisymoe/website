@@ -18,6 +18,7 @@
         "unocss-preset-scrollbar": "^0.2.1"
     },
     "devDependencies": {
+        "@iconify-json/simple-icons": "^1.1.65",
         "@types/node": "^20.4.10"
     }
 }

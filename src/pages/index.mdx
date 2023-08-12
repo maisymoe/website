@@ -4,8 +4,18 @@ layout: "@layouts/BaseLayout.astro"
 ---
 
 import Greeting from "@components/Greeting.astro";
+import GitHubStats from "@components/GitHubStats.astro";
 
 {/* Contains a h1, effectively acts as the "#" for this page */}
 <Greeting />
 
-Welcome to my website!
+Welcome to my website! I'm a student from Britain who is particularly passionate about programming - especially in TypeScript.
+
+## Contact
+I'm basically everywhere online - here's some examples!
+
+<div class="max-w-40 my-2">haha socials go here i haven't made the component yet :D</div>
+
+{/* What the fuck, you can put hyperlinks in HTML tags in MDX!? */}
+## Stats <span class="text-xs font-thin">(sourced from [my GitHub](//github.com/Beefers))</span>
+<GitHubStats />
