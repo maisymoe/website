@@ -21,10 +21,15 @@ dependencies:
     version: 0.55.0
   astro:
     specifier: ^2.10.7
-    version: 2.10.7
+    version: 2.10.7(@types/node@20.4.10)
   unocss:
     specifier: ^0.55.0
     version: 0.55.0(postcss@8.4.27)(vite@4.4.9)
+
+devDependencies:
+  '@types/node':
+    specifier: ^20.4.10
+    version: 20.4.10
 
 packages:
 
@@ -80,7 +85,7 @@ packages:
       astro: ^2.5.0
     dependencies:
       '@astrojs/prism': 2.1.2
-      astro: 2.10.7
+      astro: 2.10.7(@types/node@20.4.10)
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.2
       rehype-raw: 6.1.1
@@ -999,6 +1004,9 @@ packages:
       '@types/unist': 2.0.7
     dev: false
 
+  /@types/node@20.4.10:
+    resolution: {integrity: sha512-vwzFiiy8Rn6E0MtA13/Cxxgpan/N6UeNYR9oUu6kuJWxu6zCk98trcDp8CBhbtaeuq9SykCmXkFr2lWLoPcvLg==}
+
   /@types/parse5@6.0.3:
     resolution: {integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==}
     dev: false
@@ -1026,7 +1034,7 @@ packages:
       '@unocss/core': 0.55.0
       '@unocss/reset': 0.55.0
       '@unocss/vite': 0.55.0(vite@4.4.9)
-      vite: 4.4.9
+      vite: 4.4.9(@types/node@20.4.10)
     transitivePeerDependencies:
       - rollup
     dev: false
@@ -1204,7 +1212,7 @@ packages:
       chokidar: 3.5.3
       fast-glob: 3.3.1
       magic-string: 0.30.2
-      vite: 4.4.9
+      vite: 4.4.9(@types/node@20.4.10)
     transitivePeerDependencies:
       - rollup
     dev: false
@@ -1303,7 +1311,7 @@ packages:
     hasBin: true
     dev: false
 
-  /astro@2.10.7:
+  /astro@2.10.7(@types/node@20.4.10):
     resolution: {integrity: sha512-R8aF4yphrsbhxW2UxHZ1DslBn8e8vPQ23+Z/OnajNE1Q4HEZCOZ4CAbHJx2PDwq2p+CRWArNalpr3+rTqyOYBQ==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
@@ -1366,7 +1374,7 @@ packages:
       typescript: 5.1.6
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.4.9
+      vite: 4.4.9(@types/node@20.4.10)
       vitefu: 0.2.4(vite@4.4.9)
       which-pm: 2.0.0
       yargs-parser: 21.1.1
@@ -3940,7 +3948,7 @@ packages:
       '@unocss/transformer-directives': 0.55.0
       '@unocss/transformer-variant-group': 0.55.0
       '@unocss/vite': 0.55.0(vite@4.4.9)
-      vite: 4.4.9
+      vite: 4.4.9(@types/node@20.4.10)
     transitivePeerDependencies:
       - postcss
       - rollup
@@ -4001,7 +4009,7 @@ packages:
       vfile-message: 3.1.4
     dev: false
 
-  /vite@4.4.9:
+  /vite@4.4.9(@types/node@20.4.10):
     resolution: {integrity: sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -4029,6 +4037,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 20.4.10
       esbuild: 0.18.20
       postcss: 8.4.27
       rollup: 3.28.0
@@ -4044,7 +4053,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.4.9
+      vite: 4.4.9(@types/node@20.4.10)
     dev: false
 
   /vscode-css-languageservice@6.2.6:

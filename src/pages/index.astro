@@ -1,12 +1,14 @@
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>maisy's website</title>
-    </head>
-    <body>
-        <h1>Liftoff!</h1>
-    </body>
-</html>
+---
+import AccentGradient from "@components/AccentGradient.astro";
+import ProfilePicture from "@components/ProfilePicture.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+
+<!-- TODO: Probably better as .mdx -->
+<BaseLayout>
+    <span class="flex gap-4 items-center mb-4">
+        <ProfilePicture height={96} width={96} inline />
+        <h1 class="text-6xl!">Hi there, I'm <AccentGradient>maisy</AccentGradient>!</h1>
+    </span>
+    <p>Welcome to my website!</p>
+</BaseLayout>

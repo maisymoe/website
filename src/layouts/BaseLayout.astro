@@ -1,0 +1,31 @@
+---
+import "@unocss/reset/tailwind.css";
+import Navbar from "@components/Navbar.astro";
+
+const { title, class: className, ogpType, ogpDescription } = Astro.props;
+const baseTitle = "maisy's website";
+const usableTitle = title ? `${title} - ${baseTitle}` : baseTitle;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <!-- TODO: How do I use the Uno theme directly here? -->
+        <meta name="theme-color" content="#a0b0b4" />
+        <meta name="generator" content={Astro.generator} />
+        <meta property="og:type" content={ogpType ?? "website"} />
+        <meta property="og:site_name" content={usableTitle} />
+        <meta property="og:description" content={ogpDescription ?? "Hi there, I'm maisy!"} />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <title>{usableTitle}</title>
+        <slot name="head" />
+    </head>
+
+    <body class=`bg-gradient-to-b from-primary to-secondary text-normal overflow-hidden h-screen font-sans tracking-wide ${className}`>
+        <Navbar />
+        <main class="absolute z-999 left-0 right-0 mx-auto p-4 h-full sm:w-[75%] lt-sm:w-full max-w-[1920px] overflow-auto">
+            <span class="p-4"><slot /></span>
+        </main>
+    </body>
+</html>

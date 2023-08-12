@@ -1,0 +1,8 @@
+---
+import routes from "@res/routes.json";
+import NavBarItem from "@components/NavbarItem.astro";
+---
+
+<div class="bg-secondary bg-opacity-90 p-4 flex flex-row justify-center gap-4">
+    {routes.map((route: Route) => <NavBarItem name={route.name} href={route.path} /> )}
+</div>

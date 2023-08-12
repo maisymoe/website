@@ -1,0 +1,11 @@
+---
+export interface Props {
+    width?: number;
+    height?: number;
+    inline?: boolean;
+}
+
+const { width, height, inline } = Astro.props;
+---
+
+<img class=`rounded-full ${inline ? "inline-block" : "block"}` width={width} height={height} src="/pfp.jpg" />
