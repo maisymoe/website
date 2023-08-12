@@ -1,10 +1,12 @@
 import { defineConfig, presetUno, presetWebFonts, transformerVariantGroup } from "unocss";
+import { presetScrollbar } from "unocss-preset-scrollbar";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 
 export default defineConfig({
     presets: [
         presetUno(),
+        presetScrollbar(),
         presetWebFonts({
             provider: "google",
             fonts: {
@@ -37,6 +39,7 @@ export default defineConfig({
             primary: "#373446",
             secondary: "#2E2B3B",
             tertiary: "#25222F",
+            border: "#a0b0b420",
 
             // Text
             header: "#FAFAFF",

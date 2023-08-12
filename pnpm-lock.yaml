@@ -25,6 +25,9 @@ dependencies:
   unocss:
     specifier: ^0.55.0
     version: 0.55.0(postcss@8.4.27)(vite@4.4.9)
+  unocss-preset-scrollbar:
+    specifier: ^0.2.1
+    version: 0.2.1(unocss@0.55.0)
 
 devDependencies:
   '@types/node':
@@ -1069,6 +1072,10 @@ packages:
       unconfig: 0.3.10
     dev: false
 
+  /@unocss/core@0.31.17:
+    resolution: {integrity: sha512-DJ3Uk2ePVXvV1qQmgoLK44aqB6f0s+naOEvouI97nzVXDZgxDQPBxIPB/L4vvE4U+gQxEiHwwE3gJ75iPqVzXw==}
+    dev: false
+
   /@unocss/core@0.55.0:
     resolution: {integrity: sha512-TcTugpuhsv6OwMsP3iFIG8FVc9N5JzkojIGNAKF8I2WBftZ//3QcpEHiHc1mH3MlPYfJgUvCcT6/Gad55qmHzg==}
     dev: false
@@ -1114,6 +1121,12 @@ packages:
       ofetch: 1.1.1
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@unocss/preset-mini@0.31.17:
+    resolution: {integrity: sha512-gVgMTOKLt3O1ym348QIBmR5sS9W0Ozkk5xelhH6e0VXcpg0dXDPDrl4hFErMy4x6IB86yyJG6Dz5JhcwQB13Ig==}
+    dependencies:
+      '@unocss/core': 0.31.17
     dev: false
 
   /@unocss/preset-mini@0.55.0:
@@ -3914,6 +3927,15 @@ packages:
       '@types/unist': 2.0.7
       unist-util-is: 5.2.1
       unist-util-visit-parents: 5.1.3
+    dev: false
+
+  /unocss-preset-scrollbar@0.2.1(unocss@0.55.0):
+    resolution: {integrity: sha512-7ubHdOaUwr7xBn1glPpICNNsM2SZGjvWK5uRPNiQYsrZ9YFjsCGHk9x5S2R8pTkuMDQeiaSa/UQbYhjC8Fra5g==}
+    peerDependencies:
+      unocss: '>= 0.31.13 < 1'
+    dependencies:
+      '@unocss/preset-mini': 0.31.17
+      unocss: 0.55.0(postcss@8.4.27)(vite@4.4.9)
     dev: false
 
   /unocss@0.55.0(postcss@8.4.27)(vite@4.4.9):

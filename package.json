@@ -17,7 +17,8 @@
         "@unocss/reset": "^0.55.0",
         "@unocss/transformer-variant-group": "^0.55.0",
         "astro": "^2.10.7",
-        "unocss": "^0.55.0"
+        "unocss": "^0.55.0",
+        "unocss-preset-scrollbar": "^0.2.1"
     },
     "devDependencies": {
         "@types/node": "^20.4.10"
