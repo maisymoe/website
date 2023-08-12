@@ -11,8 +11,7 @@
 
 a {
     transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
-    color: "theme.colors.accent-alt";
-    text-decoration: unset;
+    color: "theme.colors.accent-alt" !important;
 }
 
 a:hover {
@@ -29,26 +28,26 @@ h2 {
     color: "theme.colors.header";
     font-size: 1.5rem !important;
     font-weight: 600 !important;
-    margin-top: 0.75rem;
+    margin-top: 0.75rem !important;
 }
 
 h3 {
     color: "theme.colors.header";
     font-size: 1.25rem !important;
     font-weight: 500 !important;
-    margin-top: 0.5rem;
+    margin-top: 0.5rem !important;
 }
 
 h4 {
     color: "theme.colors.header";
     font-size: 1.15rem !important;
     font-weight: 400 !important;
-    margin-top: 0.25rem;
+    margin-top: 0.25rem !important;
 }
 
 code {
     background-color: "theme.colors.secondary";
     border-radius: 0.2rem;
     padding: 0.1rem;
-    font-family: "theme.fontFamily.mono";
+    font-family: "theme.fontFamily.mono" !important;
 }
