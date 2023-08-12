@@ -1,8 +1,9 @@
 ---
 import "@unocss/reset/tailwind.css";
+import getProps from "@res/js/getProps";
 import Navbar from "@components/Navbar.astro";
 
-const { title, class: className, ogpType, ogpDescription } = Astro.props;
+const { title, class: className, ogpType, ogpDescription } = getProps(Astro.props);
 const baseTitle = "maisy's website";
 const usableTitle = title ? `${title} - ${baseTitle}` : baseTitle;
 ---
@@ -22,7 +23,7 @@ const usableTitle = title ? `${title} - ${baseTitle}` : baseTitle;
         <slot name="head" />
     </head>
 
-    <body class=`bg-gradient-to-b from-primary to-secondary text-normal h-full font-sans tracking-wide scrollbar scrollbar-track-color-tertiary scrollbar-thumb-color-accent scrollbar-w-2 ${className}`>
+    <body class=`bg-gradient-to-b from-primary to-secondary text-normal h-full bg-no-repeat bg-fixed font-sans tracking-wide scrollbar scrollbar-track-color-tertiary scrollbar-thumb-color-accent scrollbar-w-2 ${className}`>
         <Navbar />
         <main class="mx-auto p-6 pt-18 h-full sm:w-[75%] lt-sm:w-full max-w-[1920px]">
             <slot />
