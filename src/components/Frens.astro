@@ -1,0 +1,40 @@
+---
+import ProfilePicture from "@components/ProfilePicture.astro";
+
+const coolPeople = [
+    "celdi16",
+    "Vendicated",
+    "Yellowsink",
+    "twnlink",
+    "redstonekasi",
+    "xirreal",
+    "phorcys420",
+    "lexisother",
+    "AAGaming00",
+    "SlippingGitty",
+    "FieryFlames",
+    "lucysim9",
+    "GangsterFox",
+    "acquitelol",
+    "nexpid",
+    "wingio",
+    "Cynosphere",
+    "CanadaHonk",
+];
+---
+
+<div id="frens" class="flex flex-row flex-wrap gap-2 mt-2">
+    {coolPeople.map((p) => {
+        const profileUrl = `//github.com/${p}`;
+
+        return (
+            <a href={profileUrl}><ProfilePicture href={`${profileUrl}.png`} width={64} /></a>
+        )
+    })}
+</div>
+
+<script>
+    // https://codeberg.org/Ven/vendicated.dev/src/commit/121f33699ad5876f2ef94a69e5835ad591a35d5f/src/pages/index.astro#L51-L57
+    const frens = document.querySelector("#frens") as HTMLDivElement;
+    for (let i = frens.children.length; i >= 0; i--) frens.appendChild(frens.children[Math.floor(Math.random() * i)]);
+</script>

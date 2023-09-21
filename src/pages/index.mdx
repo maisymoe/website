@@ -4,8 +4,9 @@ layout: "@layouts/BaseLayout.astro"
 ---
 
 import Greeting from "@components/Greeting.astro";
-import GitHubStats from "@components/GitHubStats.astro";
 import Socials from "@components/Socials.astro";
+import GitHubStats from "@components/GitHubStats.astro";
+import Frens from "@components/Frens.astro";
 
 {/* Contains a h1, effectively acts as the "#" for this page */}
 <Greeting />
@@ -16,8 +17,14 @@ Welcome to my website! I'm a student from Britain who is particularly passionate
 I'm basically everywhere online - here's some examples!
 
 <Socials />
-{/* <div class="max-w-40 my-2">haha socials go here i haven't made the component yet :D</div> */}
 
-{/* What the fuck, you can put hyperlinks in HTML tags in MDX!? */}
-## Stats <span class="text-xs font-thin">(sourced from [my GitHub](//github.com/maisymoe))</span>
-<GitHubStats />
+<div class="grid md:grid-cols-2 lt-md:grid-rows-2">
+    <div>
+        ## Stats <span class="text-xs font-thin">(sourced from [my GitHub](//github.com/maisymoe))</span>
+        <GitHubStats />
+    </div>
+    <div>
+        ## My frens :D
+        <Frens />
+    </div>
+</div>
