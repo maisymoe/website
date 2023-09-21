@@ -16,8 +16,9 @@ const usableTitle = title ? `${title} - ${baseTitle}` : baseTitle;
         <meta name="theme-color" content="#86b8c4" />
         <meta name="generator" content={Astro.generator} />
         <meta property="og:type" content={ogpType ?? "website"} />
-        <meta property="og:site_name" content={usableTitle} />
+        <meta property="og:title" content={usableTitle} />
         <meta property="og:description" content={ogpDescription ?? "Hi there, I'm maisy!"} />
+        <meta property="og:image" content="/blueberries.png" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="me" href="https://wetdry.world/@maisy" />
         <title>{usableTitle}</title>
