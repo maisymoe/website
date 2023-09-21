@@ -10,15 +10,15 @@
         "astro": "astro"
     },
     "dependencies": {
-        "@astrojs/mdx": "^0.19.7",
-        "@unocss/astro": "^0.55.0",
-        "@unocss/reset": "^0.55.0",
-        "astro": "^2.10.7",
-        "unocss": "^0.55.0",
-        "unocss-preset-scrollbar": "^0.2.1"
+        "@astrojs/mdx": "^1.1.0",
+        "@unocss/astro": "^0.56.1",
+        "@unocss/reset": "^0.56.1",
+        "astro": "^3.1.2",
+        "unocss": "^0.56.1",
+        "unocss-preset-scrollbar": "^0.3.0"
     },
     "devDependencies": {
-        "@iconify-json/simple-icons": "^1.1.65",
-        "@types/node": "^20.4.10"
+        "@iconify-json/simple-icons": "^1.1.71",
+        "@types/node": "^20.6.3"
     }
 }
