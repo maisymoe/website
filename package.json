@@ -19,6 +19,7 @@
         "unocss-preset-scrollbar": "^0.3.0"
     },
     "devDependencies": {
-        "@types/node": "^20.6.3"
+        "@types/node": "^20.6.3",
+        "sass": "^1.69.0"
     }
 }

@@ -1,0 +1,14 @@
+---
+import "@css/rain.scss";
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+    <div slot="extras" class="rain-root" />
+    <slot />
+</BaseLayout>
+
+<script>
+    import rainmaker from "@js/rainmaker";
+    rainmaker();
+</script>
