@@ -3,7 +3,7 @@ import "@css/rain.scss";
 import BaseLayout from "@layouts/BaseLayout.astro";
 ---
 
-<BaseLayout>
+<BaseLayout {...Astro.props}>
     <div slot="extras" class="rain-root" />
     <slot />
 </BaseLayout>
