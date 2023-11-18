@@ -39,7 +39,7 @@ export default function rainmaker() {
         }
 
         // Make the drop root
-        const drop = makeDropElem("drop", { left: `${position}%`, bottom: `${randomFiver + 90}%` });
+        const drop = makeDropElem("drop", { left: `${position}%`, bottom: `${randomFiver + 100}%` });
 
         // Make the stem and splat of the drop, append them to root
         [makeDropElem("stem"), makeDropElem("splat")].forEach(e => drop.appendChild(e));
