@@ -10,3 +10,10 @@ interface Social {
     iconPack?: string;
     color?: string;
 }
+
+interface Post {
+    title: string;
+    description: string;
+    publishedAt: string;
+    tags?: string[];
+}

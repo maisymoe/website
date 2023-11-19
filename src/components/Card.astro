@@ -1,0 +1,16 @@
+---
+export interface Props {
+    href?: string;
+    class?: string;
+    newTab?: boolean;
+    rel?: string;
+}
+
+const { href, class: className, newTab, rel } = Astro.props;
+---
+
+<a rel={rel} target={newTab ? "_blank" : "_self"} class=`text-normal! ${!href && "hover:(opacity-100!)"}` href={href}>
+    <div class=`bg-secondary bg-opacity-95 backdrop-filter backdrop-blur p-4 rounded-xl ${className}`>
+        <slot />
+    </div>
+</a>

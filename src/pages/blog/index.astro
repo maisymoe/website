@@ -1,11 +1,17 @@
 ---
+import type { MDXInstance } from "astro";
 import RainLayout from "@layouts/RainLayout.astro";
+import PostCard from "@components/PostCard.astro";
+
+const posts = await Astro.glob<Post>("./**/*.mdx");
+
+// Reverse chronological order - thanks Yellowsink
+const sortPosts = (p1: MDXInstance<Post>, p2: MDXInstance<Post>) => new Date(p2.frontmatter.publishedAt).getTime() - new Date(p1.frontmatter.publishedAt).getTime();
 ---
 
 <RainLayout title="blog" ogpDescription="Things I've written for the internet to read.">
-    <!-- TODO -->
-    <div class="w-screen h-screen fixed left-0 bottom-0 z--1 flex flex-col gap-2 text-center items-center justify-center">
-        <img width="128" src="/dog.webp" />
-        <i class="max-w-70">Looks like there's nothing here - check back soon?</i>
+    <div class="flex flex-col gap-2 text-center">
+        {posts.sort(sortPosts).map((post) => <PostCard {...post.frontmatter} href={post.url!} />)}
+        <img class="self-center image-render-pixel" width="64" src="/dog.webp" />
     </div>
 </RainLayout>

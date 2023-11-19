@@ -1,0 +1,27 @@
+---
+title: The Room of Rain
+description: A brief description of the very blog you're looking at right now!
+publishedAt: 2023-11-18T23:05:41.699Z
+tags: ["testing", "rambling"]
+layout: "@layouts/PostLayout.astro"
+---
+
+# Hey there!
+<sup>Is this thing on?</sup>
+
+Welcome to my rainy place.
+
+## How's it work?
+The majority of the work is done by Astro's amazing support for Markdown. I iterate over every post (obtained via `Astro.glob`), and map their frontmatter to an Astro component,
+`PostCard` - you can see this in the header!
+
+<br />
+
+Since these posts are *also* marked as pages, they are instantly accessible by URL, so I can simply use their `url` property to create a standard HTML link element in the `PostCard` component.
+This gives the impression that the cards navigate to the post when clicked.
+
+## Will you actually use it this time?
+<sup>*tumbleweed rolls past [my original blog](//beefers.dev/articles)*</sup>
+
+Yes! Hopefully! There have been many cases lately where I have thought "man, I could totally write something about this", which is promising. I suppose the fact that this initial post
+is so detailed is a good sign, too.
