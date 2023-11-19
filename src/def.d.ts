@@ -14,6 +14,6 @@ interface Social {
 interface Post {
     title: string;
     description: string;
-    publishedAt: string;
+    pubDate: string;
     tags?: string[];
 }

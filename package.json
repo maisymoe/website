@@ -11,6 +11,7 @@
     },
     "dependencies": {
         "@astrojs/mdx": "^1.1.4",
+        "@astrojs/rss": "^3.0.0",
         "@unocss/astro": "^0.57.3",
         "@unocss/reset": "^0.57.3",
         "astro": "^3.5.3",

@@ -1,7 +1,7 @@
 ---
 title: The Room of Rain
 description: A brief description of the very blog you're looking at right now!
-publishedAt: 2023-11-18T23:05:41.699Z
+pubDate: 2023-11-18T23:05:41.699Z
 tags: ["testing", "rambling"]
 layout: "@layouts/PostLayout.astro"
 ---
@@ -19,6 +19,11 @@ The majority of the work is done by Astro's amazing support for Markdown. I iter
 
 Since these posts are *also* marked as pages, they are instantly accessible by URL, so I can simply use their `url` property to create a standard HTML link element in the `PostCard` component.
 This gives the impression that the cards navigate to the post when clicked.
+
+<br />
+
+You can also view The Room of Rain in your favourite RSS reader, once again thanks to Astro.
+This is achieved using a route that serves data - in this case, an RSS feed generated via `import.meta.glob` and `@astrojs/rss`. Truly amazing!
 
 ## Will you actually use it this time?
 <sup>*tumbleweed rolls past [my original blog](//beefers.dev/articles)*</sup>
