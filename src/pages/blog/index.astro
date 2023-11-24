@@ -4,7 +4,7 @@ import Icon from "astro-icon";
 import RainLayout from "@layouts/RainLayout.astro";
 import PostCard from "@components/PostCard.astro";
 
-const posts = await Astro.glob<Post>("./**/*.mdx");
+const posts = await Astro.glob<Post>("./**/*.md*");
 
 // Reverse chronological order - thanks Yellowsink
 const sortPosts = (p1: MDXInstance<Post>, p2: MDXInstance<Post>) => new Date(p2.frontmatter.pubDate).getTime() - new Date(p1.frontmatter.pubDate).getTime();
