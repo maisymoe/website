@@ -1,0 +1,43 @@
+---
+title: Solving the Bottleneck
+description: A story about a networking fumble, and how I resolved it.
+pubDate: 2023-12-19T00:48:56.673Z
+tags: ["networking"]
+layout: "@layouts/PostLayout.astro"
+---
+
+<sup>This post is rather diagram-focused, and I apologise for what turns out to be a sub-optimal reading experience.</sup>
+
+# Let's start at the beginning.
+A few months ago, I moved into a new house. The previous owners had lived here for **26 years!!**
+This, combined with the fact they operated a home business, meant they had an elaborate network setup.
+I am unsure quite how they used it, but this crude diagram demonstrates how they left it for us when we arrived:
+
+<img class="w-full sm:max-w-100 my-2" alt="Diagram of original network" src="/blogAssets/solving-the-bottleneck/network_original.svg" />
+
+Not much to work with, is there?
+
+## Our additions
+Obviously, we had our own stuff to put in here, so let's skip forward in time to... around two hours ago. After many purchases of electronic devices, we landed on this setup.
+Here is a similarly crude graph:
+
+<img class="w-full sm:max-w-100 my-2" alt="Diagram of our network, prior to fixing it" src="/blogAssets/solving-the-bottleneck/network_ours_prefix.svg" />
+
+Can you spot the issue? No? Take a look at the long, Frankenstein's monster of an ethernet cable leading down from the router into the computer.
+Then, look at how we were delivering Wi-Fi to the basement - a home plug (or powerline adapter, in freedom terms), connected to a router that acted as a Wi-Fi signal booster.
+This was very, very suboptimal, yet it stayed like this for some time!
+I began to notice the issue when using *Virtual Desktop* for wireless virtual reality, or *Steam Link* for game streaming. What we had effectively done was split our network into two "rings".
+Communication between devices in each ring was fine, running at around **1Gbps** speeds. It was only when a device in ring A, for example, my computer, attempted to communicate with a device wirelessly
+connected to ring B, such as my VR headset, that the bottleneck reared it's ugly head. Communication speeds were a mere **11Mbps**, which is *completely unacceptable* for most content, especially VR.
+
+## The (obvious) solution
+After getting particularly annoyed at my *Steam Link* session being a slideshow tonight when trying to use my fancy new *Razer Kishi*, I did a little bit of thinking. 
+I realised that the home plug was *entirely redundant*, and felt particularly stupid for never acting upon this before.
+This revelation was followed by a mad sprint upstairs, where I proposed the idea to my stepfather - who agreed, and my solution was implemented:
+
+<img class="w-full sm:max-w-100 my-2" alt="Diagram of our network, prior to fixing it" src="/blogAssets/solving-the-bottleneck/network_ours_postfix.svg" />
+
+The secondary router, as well as delivering Wi-Fi, is now connected to the computer via Ethernet... which removes the "ring" issue **entirely!**
+The results were immediately apparent when trying both *Virtual Desktop* and *Steam Link*, which now ran flawlessly - *Virtual Desktop* doesn't even attempt to automatically adjust the bitrate!
+I also noted minor improvements in Wi-Fi quality, and a more consistent outgoing connection speed, too.
+Overall, a great success!
