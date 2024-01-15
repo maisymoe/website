@@ -10,7 +10,6 @@ export default defineConfig({
         presetWebFonts({
             provider: "google",
             fonts: {
-                sans: "Inter",
                 mono: "JetBrains Mono",
             },
         }),
@@ -36,21 +35,20 @@ export default defineConfig({
     theme: {
         colors: {
             // Background
-            primary: "#373446",
-            secondary: "#2E2B3B",
-            tertiary: "#25222F",
+            primary: "#1d2331",
+            secondary: "#151b28",
+            tertiary: "#0d101b",
             border: "#a0b0b420",
 
             // Text
-            header: "#FAFAFF",
-            normal: "#EEF0F2",
-            muted: "#DADDD8",
+            header: "#e9f0f3",
+            normal: "#dfe9ed",
+            muted: "#bfd4db",
 
             // Highlights
-            accent: "#a0b0b4",
-            "accent-alt": "#86b8c4",
-            selection: "#86b8c430",
-            red: "#f16b78",
+            accent: "#8080B7",
+            "accent-alt": "#5e5db8",
+            selection: "#8080B720",
         }
     },
 })
