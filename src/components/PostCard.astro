@@ -10,16 +10,20 @@ export interface Props extends Post {
 const { href, class: className, title, description, pubDate, tags } = Astro.props;
 ---
 
-<Card href={href} class={`lt-sm:text-center ${className}`}>
-    <div class="flex sm:flex-row lt-sm:flex-col-reverse items-center text-header">
+<Card href={href} class={`lt-sm:(text-center) mb-2 ${className}`}>
+    <a href="/" class="flex flex-row gap-1 items-center lt-sm:(mb-2)">
+        <Icon class="w-4 h-4" pack="ic" name="round-arrow-back-ios-new" />
+        <span>Return home</span>
+    </a>
+    <div class="flex sm:(flex-row) lt-sm:(flex-col-reverse) items-center text-header">
         <span class="text-xl">{title}</span>
-        <div class="flex flex-row gap-1 items-center sm:ml-auto">
+        <div class="flex flex-row gap-1 items-center sm:(ml-auto)">
             <Icon class="w-4 h-4" pack="ic" name="round-access-time" />
             <span>{pubDate.split("T")[0]}</span>
         </div>
     </div>
-    <div class="flex sm:flex-row lt-sm:flex-col items-center">
-        <span class="lt-sm:text-sm">{description}</span>
-        <span class="rounded-lg font-italic sm:ml-auto lt-sm:(mt-1 text-xs)">{tags?.join(", ")}</span>
+    <div class="flex sm:(flex-row) lt-sm:(flex-col) items-center">
+        <span class="lt-sm:(text-sm)">{description}</span>
+        <span class="rounded-lg font-italic sm:(ml-auto text-right) lt-sm:(mt-1 text-xs)">{tags?.join(", ")}</span>
     </div>
 </Card>

@@ -1,6 +1,6 @@
 ---
 import type { MDXInstance } from "astro";
-import RainLayout from "@layouts/RainLayout.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
 import PostCard from "@components/PostCard.astro";
 
 // This layout *should* never be used by anything but mdx files, so we can probably safely assume this
@@ -8,7 +8,7 @@ export type Props = MDXInstance<Post>;
 const post = Astro.props.frontmatter;
 ---
 
-<RainLayout {...Astro.props} ogpDescription={post.description}>
+<BaseLayout {...Astro.props} ogpDescription={post.description}>
     <PostCard class="mb-2" {...post} />
     <slot />
-</RainLayout>
+</BaseLayout>

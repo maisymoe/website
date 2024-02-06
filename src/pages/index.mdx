@@ -1,30 +1,42 @@
 ---
-title: home
-layout: "@layouts/BaseLayout.astro"
+title: evicted
+layout: "@layouts/RainLayout.astro"
+centerVertical: true
 ---
 
-import Greeting from "@components/Greeting.astro";
-import Socials from "@components/Socials.astro";
-import GitHubStats from "@components/GitHubStats.astro";
+import AccentGradient from "@components/AccentGradient.astro";
+import BlogPosts from "@components/BlogPosts.astro";
 import Frens from "@components/Frens.astro";
 
-{/* Contains a h1, effectively acts as the "#" for this page */}
-<Greeting />
+# Hi there, I'm <AccentGradient>maisy</AccentGradient>.
+As of today, I am officially departing the wider Internet. This is something I had been planning for quite some time now - and is based on a number of factors, but primarily to do with consistent real-life harassment
+based on my online identity.
 
-Welcome to my website! I'm a student from Britain who is particularly passionate about programming - especially in TypeScript.
+## What's going to happen to your projects?
+* [Vendetta](//github.com/vendetta-mod) and [my plugins for it](//github.com/maisymoe/strife) are officially discontinued. Sorry.
+* [Coffee](//github.com/maisymoe/coffee) will likely stay online for as long as my hosting hardware remains operational.
+* Anything I worked on at [uwu.network](//github.com/uwu) will sit dormant, left to potentially be maintained by another member.
 
-## Contact
-I'm basically everywhere online - here's some examples!
+## Closing thoughts
+It's rather disappointing that things had to end this way, and as difficult as it is to make this choice, it will ultimately result in the improvement of my mental health, my grades, and my life as a whole.
 
-<Socials />
+<br />
 
-<div class="grid md:grid-cols-2 lt-md:grid-rows-2">
-    <div>
-        ## Stats <span class="text-xs font-thin">(sourced from [my GitHub](//github.com/maisymoe))</span>
-        <GitHubStats />
-    </div>
-    <div>
-        ## My frens :D
-        <Frens />
-    </div>
-</div>
+To those who took it upon themselves to stalk me online, and make fun of me for who I wanted to be; congratulations, you won, have a gold star.
+
+To the many comparatively wonderful people I met during my time online, thank you for being there for me - you rock.
+
+<br />
+
+If you'd like to read the small number of posts on my blog, they will remain here:
+<BlogPosts />
+
+<br />
+
+Lastly, you should check out some of these lovely people:
+<Frens />
+
+<br />
+
+<p class="text-lg">So long, thank you, and I love you.</p>
+<sup>- maisy</sup>
