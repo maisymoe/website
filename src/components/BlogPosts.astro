@@ -1,0 +1,7 @@
+---
+import type { MDXInstance } from "astro";
+
+const posts = await Astro.glob<MDXInstance<Post>>("../pages/blog/**/*.(md|mdx)");
+---
+
+{posts.map((p) => <div><a href={p.url}>{p.frontmatter.title}</a> - {p.frontmatter.pubDate.split("T")[0]}</div>)}

@@ -1,9 +1,8 @@
 ---
 import "@unocss/reset/tailwind.css";
 import getProps from "@res/js/getProps";
-import Navbar from "@components/Navbar.astro";
 
-const { title, class: className, ogpType, ogpDescription } = getProps(Astro.props);
+const { title, class: className, ogpType, ogpDescription, centerVertical } = getProps(Astro.props);
 const baseTitle = "maisy's website";
 const usableTitle = title ? `${title} - ${baseTitle}` : baseTitle;
 ---
@@ -25,11 +24,12 @@ const usableTitle = title ? `${title} - ${baseTitle}` : baseTitle;
         <slot name="head" />
     </head>
 
-    <body class=`bg-secondary bg-gradient-to-b from-primary to-secondary text-normal h-full bg-no-repeat bg-fixed font-mono tracking-tight scrollbar scrollbar-track-color-tertiary scrollbar-thumb-color-accent scrollbar-w-2 ${className}`>
-        <slot name="extras"/> 
-        <Navbar />
-        <main class="mx-auto p-6 pt-18 h-full sm:w-[75%] lt-sm:w-full max-w-[1920px]">
-            <slot />
-        </main>
+    <body class=`bg-secondary bg-gradient-to-b from-primary to-secondary text-normal bg-no-repeat bg-fixed font-mono tracking-tight scrollbar scrollbar-track-color-transparent scrollbar-thumb-color-accent scrollbar-w-2 ${className}`>
+        <slot name="extras"/>
+        <div class="h-screen flex sm:(flex-row justify-center) overflow-y-auto">
+            <main class="p-6 sm:(w-[75%] max-w-[1920px] h-fit) lt-sm:(w-full)" style={centerVertical && { marginTop: "auto", marginBottom: "auto"}}>
+                <slot />
+            </main>
+        </div>
     </body>
 </html>
